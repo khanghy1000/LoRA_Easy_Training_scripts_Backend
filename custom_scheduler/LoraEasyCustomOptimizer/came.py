@@ -188,12 +188,12 @@ class CAME(BaseOptimizer):
                 dtype=torch.float32,
                 device=self.state_storage_device
             )
-            state['exp_avg_res_row'] = torch.zeros(
+            state['exp_avg_res_row'] = torch.ones(
                 grad_shape[:-1],
                 dtype=torch.float32,
                 device=self.state_storage_device
             )
-            state['exp_avg_res_col'] = torch.zeros(
+            state['exp_avg_res_col'] = torch.ones(
                 grad_shape[:-2] + grad_shape[-1:],
                 dtype=torch.float32,
                 device=self.state_storage_device
